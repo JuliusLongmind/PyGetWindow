@@ -343,6 +343,8 @@ elif sys.platform == "win32":
     )
 
     Window = Win32Window
+elif sys.platform == "linux":
+    from ._pygetwindow_linux import *
 else:
     raise NotImplementedError(
         "PyGetWindow currently does not support Linux. If you have Xlib knowledge, please contribute! https://github.com/asweigart/pygetwindow"
